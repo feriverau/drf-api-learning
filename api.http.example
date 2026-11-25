@@ -29,3 +29,34 @@ Content-Type: application/json
 
 GET http://127.0.0.1:8000/user-orders/ HTTP/1.1
 Authorization: Bearer EL_ACCESS_TOKEN
+
+###
+
+GET http://127.0.0.1:8000/products/1/ HTTP/1.1
+
+###
+
+PUT http://127.0.0.1:8000/products/2/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer EL_ACCESS_TOKEN
+{
+    "name":"Guarever",
+    "price":199.99,
+    "stock":21,
+    "description": "Guarever guarever guarever guarever guarever"
+
+}
+
+###
+
+DELETE http://127.0.0.1:8000/products/2/ HTTP/1.1
+
+###
+
+POST http://127.0.0.1:8000/api/token/refresh/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "refresh": "EL_REFRESH_TOKEN"
+
+}
